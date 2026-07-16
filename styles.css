@@ -24,6 +24,7 @@ body{
 }
 
 
+
 /* ===========================
    NAVBAR
 =========================== */
@@ -133,19 +134,15 @@ body{
     min-height:100vh;
     display:flex;
     align-items:center;
-    background:linear-gradient(
-        135deg,
-        #0F172A,
-        #1E293B
-    );
-    padding-top:80px;
+    padding-top:70px;
 }
-
 .hero-container{
     display:flex;
     justify-content:space-between;
     align-items:center;
     gap:4rem;
+
+    transform:translateY(-40px);
 }
 
 .hero-content{
@@ -156,6 +153,79 @@ body{
     color:#38BDF8;
     font-size:1.1rem;
     margin-bottom:1rem;
+}
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.scroll-indicator a{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    width:30px;
+
+    height:55px;
+
+    border:2px solid #38BDF8;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+}
+
+.scroll-indicator span{
+
+    width:6px;
+
+    height:6px;
+
+    background:#38BDF8;
+
+    border-radius:50%;
+
+    margin-top:8px;
+
+    animation:scroll 1.8s infinite;
+
+}
+
+@keyframes scroll{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(24px);
+
+    }
+
 }
 
 .hero-content h1{
@@ -183,6 +253,18 @@ body{
     display:flex;
     gap:1rem;
     margin-top:2rem;
+}
+.cursor{
+    color:#38BDF8;
+    animation:blink .8s infinite;
+}
+
+@keyframes blink{
+
+    50%{
+        opacity:0;
+    }
+
 }
 
 .btn{
@@ -258,7 +340,65 @@ body{
 /* ===========================
    ABOUT
 =========================== */
+#about{
+    padding:100px 0;
+    background:#0F172A;
+}
 
+.section-title{
+    text-align:center;
+    margin-bottom:4rem;
+}
+
+.section-title h2{
+    font-size:2.5rem;
+    color:#F8FAFC;
+    margin-bottom:.5rem;
+}
+
+.section-title p{
+    color:#94A3B8;
+}
+
+.about-content{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:4rem;
+    align-items:center;
+}
+
+.about-text p{
+    color:#CBD5E1;
+    line-height:1.8;
+    margin-bottom:1.5rem;
+}
+
+.about-stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1.5rem;
+}
+
+.stat-card{
+    background:#1E293B;
+    padding:2rem;
+    border-radius:16px;
+    text-align:center;
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+}
+
+.stat-card h3{
+    font-size:2rem;
+    color:#38BDF8;
+}
+
+.stat-card p{
+    color:#CBD5E1;
+}
 
 
 /* ===========================
