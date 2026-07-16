@@ -1,3 +1,12 @@
+/* ===========================
+   GOOGLE FONTS
+=========================== */
+
+
+/* ===========================
+   RESET
+=========================== */
+
 *{
     margin:0;
     padding:0;
@@ -10,6 +19,139 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#f8fafc;
-    color:#1e293b;
+    background:#0F172A;
+    color:#F8FAFC;
 }
+
+
+/* ===========================
+   NAVBAR
+=========================== */
+/* ===========================
+   NAVBAR
+=========================== */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+#navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(15,23,42,0.85);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+
+}
+
+#navbar .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:80px;
+
+}
+
+.logo{
+
+    text-decoration:none;
+
+    color:#F8FAFC;
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+
+}
+
+.logo:hover{
+
+    color:#38BDF8;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:2rem;
+
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:#CBD5E1;
+
+    font-weight:500;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+.nav-links a:hover{
+
+    color:#38BDF8;
+
+}
+
+
+/* ===========================
+   HERO
+=========================== */
+
+
+
+/* ===========================
+   ABOUT
+=========================== */
+
+
+
+/* ===========================
+   SKILLS
+=========================== */
+
+
+
+/* ===========================
+   PROJECTS
+=========================== */
+
+
+
+/* ===========================
+   EXPERIENCE
+=========================== */
+
+
+
+/* ===========================
+   CONTACT
+=========================== */
