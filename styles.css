@@ -93,14 +93,28 @@ body{
 }
 
 .nav-links{
-
     display:flex;
-
-    list-style:none;
-
     gap:2rem;
-
+    list-style:none;
 }
+.nav-links.active{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+
+    background: #0F172A;
+    padding: 2rem 0;
+    text-align: center;
+
+    animation: slideDown .3s ease;
+    box-shadow: 0 12px 25px rgba(0,0,0,.25);
+}
+
 
 .nav-links a{
 
@@ -121,7 +135,31 @@ body{
     color:#38BDF8;
 
 }
+@keyframes slideDown{
 
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+.menu-toggle{
+
+    transition:.3s ease;
+
+}
+
+.menu-toggle:hover{
+
+    color:#38BDF8;
+    transform:scale(1.1);
+
+}
 
 /* ===========================
    HERO
@@ -362,14 +400,14 @@ body{
 
 .about-content{
     display:grid;
-    grid-template-columns:2fr 1fr;
-    gap:4rem;
+   grid-template-columns:1fr;
+    gap:3rem;
     align-items:center;
 }
 
 .about-text p{
     color:#CBD5E1;
-    line-height:2;
+    line-height:1.7;
     margin-bottom:1.5rem;
 }
 
@@ -836,6 +874,45 @@ body{
     color:#CBD5E1;
 
 }
+footer{
+
+    background:#020617;
+
+    padding:3rem 0;
+
+    text-align:center;
+
+}
+
+.footer-message{
+
+    font-size:1.3rem;
+
+    font-weight:600;
+
+    color:#F8FAFC;
+
+    margin-bottom:1rem;
+
+}
+
+.footer-tagline{
+
+    color:#38BDF8;
+
+    margin-bottom:1.5rem;
+
+    letter-spacing:.5px;
+
+}
+
+.copyright{
+
+    color:#94A3B8;
+
+    font-size:.9rem;
+
+}
 @keyframes float{
 
     0%{
@@ -850,4 +927,63 @@ body{
         transform:translateY(0);
     }
 
+}
+.menu-toggle{
+    display:none;
+}
+@media (max-width: 768px){
+.hero-container{
+    flex-direction: column;
+}
+.hero-content{
+    text-align:center;
+}
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.hero-image img{
+    width:280px;
+    max-width:100%;
+}
+.about-content{
+    grid-template-columns:1fr;
+    gap:3rem;
+}
+
+.about-text{
+    text-align:center;
+}
+
+.about-stats{
+    grid-template-columns:repeat(2,1fr);
+}
+.menu-toggle{
+    display:block;
+    background:none;
+    border:none;
+    color:#F8FAFC;
+    font-size:2rem;
+    cursor:pointer;
+}
+.nav-links{
+    display:none;
+}
+.nav-links.active{
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+
+    background:#0F172A;
+
+    padding:2rem 0;
+
+    text-align:center;
+}
 }
