@@ -684,6 +684,58 @@ body{
     background:rgba(255,255,255,.08);
     margin:1.5rem 0;
 }
+.future-project{
+    position:relative;
+    border:2px dashed rgba(56,189,248,.4);
+}
+
+.future-project::before{
+    content:"IN DEVELOPMENT";
+    position:absolute;
+    top:18px;
+    right:-45px;
+
+    width:170px;
+
+    background:#2563EB;
+    color:white;
+
+    text-align:center;
+
+    padding:.4rem 0;
+
+    font-size:.75rem;
+    font-weight:700;
+
+    transform:rotate(45deg);
+}
+
+.coming-soon{
+    display:inline-block;
+
+    padding:.8rem 1.5rem;
+
+    border-radius:8px;
+
+    background:#2563EB;
+
+    color:white;
+
+    font-weight:600;
+}
+.projects-note{
+
+    max-width:650px;
+
+    margin:1rem auto 3rem;
+
+    color:#CBD5E1;
+
+    text-align:center;
+
+    line-height:1.7;
+
+}
 /* ===========================
    EXPERIENCE
 =========================== */
