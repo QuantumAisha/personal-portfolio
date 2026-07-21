@@ -694,7 +694,7 @@ body{
     position:absolute;
     top:18px;
     right:-45px;
-
+    pointer-events:none;
     width:170px;
 
     background:#2563EB;
